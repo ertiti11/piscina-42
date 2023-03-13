@@ -20,7 +20,8 @@ void ft_print_comb(void){
                 ft_putchar(a);
                 ft_putchar(b);
                 ft_putchar(c);
-                ft_putchar(', ');
+                write(1," ,",2);
+                
                 c++;
             }
             b++;

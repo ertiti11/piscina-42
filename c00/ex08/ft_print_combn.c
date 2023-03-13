@@ -1,62 +1,50 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_combn.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/07/07 12:36:03 by tnard             #+#    #+#             */
+/*   Updated: 2023/03/13 17:01:22 by aprieto-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	pintar(int array[], int n)
+void	ft_printing(int array[], int n)
 {
 	int		i;
 	char	c;
 
-	i = 0;
-	while (i < n)
+	i = -1;
+	while (++i < n)
 	{
 		c = array[i] + '0';
 		write(1, &c, 1);
-		i++;
 	}
-}
-
-void	recursive(int n, int array[], int i)
-{
-	int	j;
-
-	j = 0;
-	while (j <= 9)
-	{
-		while (i <= n)
-		{
-			if (i == 0)
-			{
-				array[i] = 0;
-			}
-			else
-			{
-				array[i] = array[i - 1] + 1;
-			}
-			i++;
-		}
-		pintar(array, n);
+	if (array[0] != 10 - n)
 		write(1, ", ", 2);
-		j++;
-	}
 }
 
-int	ft_print_combn(int n)
+void	ft_recursive(int array[], int n, int i)
 {
-	int	array[n];
-
-	if (n > 10)
+	if (i == 0)
+		array[i] = 0;
+	else
+		array[i] = array[i - 1] + 1;
+	while (array[i] < 11 - n + i)
 	{
-		return (1);
+		if (i == n - 1)
+			ft_printing(array, n);
+		else
+			ft_recursive(array, n, i + 1);
+		array[i] = array[i] + 1;
 	}
-	recursive(n, array, 0);
 }
 
-int	main(void)
+void	ft_print_combn(int n)
 {
-	ft_print_combn(9);
+	int	array[10];
+
+	ft_recursive(array, n, 0);
 }
