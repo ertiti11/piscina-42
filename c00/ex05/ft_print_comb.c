@@ -24,6 +24,7 @@ void ft_print_comb(void){
                 
                 c++;
             }
+            
             b++;
         }
         a++;
