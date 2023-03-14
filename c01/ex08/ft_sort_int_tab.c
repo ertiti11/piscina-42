@@ -1,40 +1,27 @@
 #include <stdio.h>
 
 
-void swap(int* xp, int* yp)
+void	ft_sort_int_tab(int *tab, int size)
 {
-    int temp = *xp;
-    *xp = *yp;
-    *yp = temp;
+	int	i;
+	int	swap;
+
+	while (size >= 0)
+	{
+		i = 0;
+		while (i < size - 1)
+		{
+			if (tab[i] > tab[i + 1])
+			{
+				swap = tab [i];
+				tab[i] = tab [i + 1];
+				tab [i + 1] = swap;
+			}
+			i++;
+		}
+		size--;
+	}
 }
-
-void ft_sort_int_tab(int *tab, int size){
-    int i =0;
-    int aux;
-    int index  = 0;
-    int nextIndex;
-    while (i<size-1){
-        
-        while(index<size -i -1){
-
-            nextIndex = index+1;
-
-            if (tab[index] > tab[nextIndex]){
-                swap(&tab[index], &tab[nextIndex]);
-                // tab[index] = aux;
-                // tab[nextIndex] = tab[index];
-                // tab[index] = aux;
-                
-            }
-            index++;
-        }
-        
-        i++;
-    }
-
-}
-
-
 
 int main(void){
 
