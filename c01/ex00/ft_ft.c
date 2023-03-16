@@ -1,16 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/16 16:43:33 by aprieto-          #+#    #+#             */
+/*   Updated: 2023/03/16 16:43:58 by aprieto-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-#include <stdio.h>
 
-void ft(int *nbr){
-    *nbr = 42;
-}
-
-
-int main (void){
-    int *nbr;
-    int numero;
-
-    nbr = &numero;
-    ft(nbr);
-    printf("%d", numero);
+void	ft(int *nbr)
+{
+	*nbr = 42;
 }

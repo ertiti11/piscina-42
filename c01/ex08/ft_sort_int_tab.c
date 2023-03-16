@@ -1,4 +1,15 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/16 16:45:41 by aprieto-          #+#    #+#             */
+/*   Updated: 2023/03/16 16:45:50 by aprieto-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 
 
 void	ft_sort_int_tab(int *tab, int size)
@@ -13,9 +24,9 @@ void	ft_sort_int_tab(int *tab, int size)
 		{
 			if (tab[i] > tab[i + 1])
 			{
-				swap = tab [i];
-				tab[i] = tab [i + 1];
-				tab [i + 1] = swap;
+				swap = tab[i];
+				tab[i] = tab[i + 1];
+				tab[i + 1] = swap;
 			}
 			i++;
 		}
@@ -23,15 +34,3 @@ void	ft_sort_int_tab(int *tab, int size)
 	}
 }
 
-int main(void){
-
-    int tab[] ={20,5,1,7,3};
-    int *p  = tab;
-    int size =5;
-
-    ft_sort_int_tab(p, size);
-    printf("%i, %i, %i, %i, %i", tab[0],tab[1],tab[2],tab[3],tab[4]);
-   
-
-
-}

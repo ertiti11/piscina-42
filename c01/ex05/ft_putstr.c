@@ -1,27 +1,23 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/16 16:45:05 by aprieto-          #+#    #+#             */
+/*   Updated: 2023/03/16 16:46:40 by aprieto-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_putstr(char *str)
 {
-	while (*str){
-        write(1, &(*str), 1);
-        str++;
-    }
-    
-
-		
-        
-        
+	while (*str)
+	{
+		write(1, &(*str), 1);
+		str++;
+	}
 }
 
-int main(void){
-    char str[] = "malaga42";
-
-    char *pstr;
-
-    pstr = str;
-    ft_putstr(pstr);
-
-    
-    
-    }

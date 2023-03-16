@@ -1,32 +1,23 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/16 16:44:37 by aprieto-          #+#    #+#             */
+/*   Updated: 2023/03/16 16:46:19 by aprieto-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 
 
-void ft_swap(int *a, int *b){
-int aux;
+void	ft_swap(int *a, int *b)
+{
+	int	aux;
 
-aux = *b;
-
-*b = *a;
-
-*a = aux;
-
-
+	aux = *b;
+	*b = *a;
+	*a = aux;
 }
 
-
-
-int main(void){
-
-int a = 3;
-int b = 4;
-
-
-ft_swap(&a, &b);
-
-
-printf("a: %i b: %i",a,b);
-
-
-
-}

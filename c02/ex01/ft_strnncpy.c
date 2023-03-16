@@ -1,31 +1,26 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnncpy.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/16 16:48:31 by aprieto-          #+#    #+#             */
+/*   Updated: 2023/03/16 16:48:37 by aprieto-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
+{
+	int	i;
 
-char *ft_strncpy(char *dest, char *src, unsigned int n){
-    
-    int i = 0;
-
-    while (i<n){
-        dest[i] = src[i];
-        i++;
-    }
-    dest[i] = '\0';
-    
-
-    return dest;
+	i = 0;
+	while (i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 
-
-
-
-int main(void){
-    char dest[4];
-    char *destt = dest;
-    char src[] = "hola";
-    unsigned int cant = 4;
-    char *srcc = src;
-    ft_strncpy(destt,srcc,cant);
-
-    printf("%s", dest);
-
-}

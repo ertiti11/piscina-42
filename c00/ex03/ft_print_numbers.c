@@ -6,7 +6,7 @@
 /*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/09 19:39:09 by aprieto-          #+#    #+#             */
-/*   Updated: 2023/03/09 19:40:52 by aprieto-         ###   ########.fr       */
+/*   Updated: 2023/03/16 16:42:17 by aprieto-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_print_numbers(void)
 {
-	int		c;
+	int	c;
 
 	c = '0';
 	while (c <= '9')

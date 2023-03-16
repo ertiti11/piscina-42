@@ -6,11 +6,12 @@
 /*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 12:36:03 by tnard             #+#    #+#             */
-/*   Updated: 2023/03/13 17:01:22 by aprieto-         ###   ########.fr       */
+/*   Updated: 2023/03/16 16:43:23 by aprieto-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
 void	ft_printing(int array[], int n)
 {
 	int		i;
@@ -44,7 +45,7 @@ void	ft_recursive(int array[], int n, int i)
 
 void	ft_print_combn(int n)
 {
-	int	array[10];
+	int array[10];
 
 	ft_recursive(array, n, 0);
 }

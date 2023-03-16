@@ -1,29 +1,25 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/16 16:49:15 by aprieto-          #+#    #+#             */
+/*   Updated: 2023/03/16 16:49:18 by aprieto-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-
-int ft_str_is_numeric(char *str)
-{   
-    
-    int i = 0;
-    while (str[i] >= '0' && str[i] <= '9')
-        i++;
-
-        if (str[i] == '\0')
-            return 1;
-        
-        else
-            return 0;
-        
-    
-    return 0;
-}
-
-int main(void)
+int	ft_str_is_numeric(char *str)
 {
-    char str[] = "234234234";
+	int	i;
 
-    char *P_str = str;
-    printf("%i", ft_str_is_numeric(P_str));
-    ft_str_is_numeric(P_str);
+	i = 0;
+	while (str[i] >= '0' && str[i] <= '9')
+		i++;
+	if (str[i] == '\0')
+		return (1);
+	else
+		return (0);
+	return (0);
 }
-

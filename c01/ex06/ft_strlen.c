@@ -1,30 +1,24 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/16 16:45:12 by aprieto-          #+#    #+#             */
+/*   Updated: 2023/03/16 16:46:48 by aprieto-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+int	ft_strlen(char *str)
+{
+	int	count;
 
-
-int ft_strlen(char *str){
-
-    int count =0;
-
-    while (*str){
-        count++;
-        str++;
-    }
-
-    return count;
-
-
-}
-
-
-
-int main(void){
-    char str[] = "ornitorrinco";
-    char *P_str;
-
-    P_str = str;
-    int number = ft_strlen(P_str);
-
-    printf("%i", number);
-
+	count = 0;
+	while (*str)
+	{
+		count++;
+		str++;
+	}
+	return (count);
 }
