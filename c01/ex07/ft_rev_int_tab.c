@@ -6,28 +6,23 @@
 /*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 16:45:18 by aprieto-          #+#    #+#             */
-/*   Updated: 2023/03/20 12:28:51 by aprieto-         ###   ########.fr       */
+/*   Updated: 2023/03/20 13:30:05 by aprieto-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_rev_int_tab(int *tab, int size)
 {
-	int	arr[size];
-	int	i;
-	int	index;
+	int		temp;
+	int		i;
+	int		half;
 
-	index = size - 1;
 	i = 0;
-	while (index >= 0)
+	temp = 0;
+	half = size / 2;
+	while (half-- > 0)
 	{
-		arr[i] = tab[index];
-		i++;
-		index--;
-	}
-	i = 0;
-	while (i <= size - 1)
-	{
-		tab[i] = arr[i];
-		i++;
+		temp = tab[i];
+		tab[i++] = tab[size - 1];
+		tab[size-- - 1] = temp;
 	}
 }

@@ -6,11 +6,11 @@
 /*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 16:43:33 by aprieto-          #+#    #+#             */
-/*   Updated: 2023/03/20 12:25:56 by aprieto-         ###   ########.fr       */
+/*   Updated: 2023/03/20 14:48:20 by aprieto-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft(int *nbr)
+void	ft_ft(int *nbr)
 {
 	*nbr = 42;
 }

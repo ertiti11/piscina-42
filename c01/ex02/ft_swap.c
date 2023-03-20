@@ -6,11 +6,9 @@
 /*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 16:44:37 by aprieto-          #+#    #+#             */
-/*   Updated: 2023/03/16 16:46:19 by aprieto-         ###   ########.fr       */
+/*   Updated: 2023/03/20 13:25:10 by aprieto-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 void	ft_swap(int *a, int *b)
 {
@@ -20,4 +18,3 @@ void	ft_swap(int *a, int *b)
 	*b = *a;
 	*a = aux;
 }
-
