@@ -6,7 +6,7 @@
 /*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 16:45:05 by aprieto-          #+#    #+#             */
-/*   Updated: 2023/03/16 16:46:40 by aprieto-         ###   ########.fr       */
+/*   Updated: 2023/03/20 12:28:14 by aprieto-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 void	ft_putstr(char *str)
 {
-	while (*str)
+	while (*str != '\0')
 	{
 		write(1, &(*str), 1);
 		str++;
 	}
 }
-

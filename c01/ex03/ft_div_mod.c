@@ -6,11 +6,9 @@
 /*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 16:44:48 by aprieto-          #+#    #+#             */
-/*   Updated: 2023/03/16 16:46:23 by aprieto-         ###   ########.fr       */
+/*   Updated: 2023/03/20 12:26:14 by aprieto-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {

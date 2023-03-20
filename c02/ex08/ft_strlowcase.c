@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/16 16:45:41 by aprieto-          #+#    #+#             */
-/*   Updated: 2023/03/20 12:29:23 by aprieto-         ###   ########.fr       */
+/*   Created: 2023/03/20 12:57:13 by aprieto-          #+#    #+#             */
+/*   Updated: 2023/03/20 13:14:31 by aprieto-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_sort_int_tab(int *tab, int size)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
-	int	swap;
 
-	while (size >= 0)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		i = 0;
-		while (i < size - 1)
-		{
-			if (tab[i] > tab[i + 1])
-			{
-				swap = tab[i];
-				tab[i] = tab[i + 1];
-				tab[i + 1] = swap;
-			}
-			i++;
-		}
-		size--;
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] = str[i] + 32;
+		i++;
 	}
+	return (str);
 }

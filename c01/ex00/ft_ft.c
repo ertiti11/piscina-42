@@ -6,11 +6,9 @@
 /*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 16:43:33 by aprieto-          #+#    #+#             */
-/*   Updated: 2023/03/16 16:43:58 by aprieto-         ###   ########.fr       */
+/*   Updated: 2023/03/20 12:25:56 by aprieto-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 void	ft(int *nbr)
 {
