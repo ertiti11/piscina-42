@@ -1,43 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/20 13:14:59 by aprieto-          #+#    #+#             */
-/*   Updated: 2023/03/20 16:51:37 by aprieto-         ###   ########.fr       */
+/*   Created: 2023/03/20 16:52:07 by aprieto-          #+#    #+#             */
+/*   Updated: 2023/03/20 17:13:33 by aprieto-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-char	*ft_strcapitalize(char *str)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int	i;
+	unsigned int	j;
+	unsigned int	i;
 
+	j = 0;
 	i = 0;
-	while (str[i] != '\0')
+	while (src[j] != '\0')
+		j++;
+	if (size != 0)
 	{
-		if (str[0] >= 'a' && str[0] <= 'z')
-			str[0] -= 32;
-		if (str[i] == ' ')
+		while (src[i] != '\0' && i < (size - 1))
 		{
-			if (str[i + 1] >= 'a' && str[i] <= 'z')
-			{
-				str[i + 1] -= 32;
-			}
+			dest[i] = src[i];
+			i++;
 		}
-		i++;
+		dest[i] = '\0';
 	}
-	return (str);
+	return (j);
 }
 
 // int main(void){
 
-//     char str[] = "hola 2omo estas tio";
+//     char str[] = "hola que tal que buen dia hace";
+
+//     char dst[] = "";
 
 //     char *Pstr = str;
+//     char *Pdst = dst;
 
-//     printf("%s",ft_strcapitalize(Pstr));
+//     unsigned int size;
+//     size = 4;
+
+//     printf("%u", ft_strlcpy(Pdst, Pstr, size));
+
+//     printf("%s", dst);
+
 // }
