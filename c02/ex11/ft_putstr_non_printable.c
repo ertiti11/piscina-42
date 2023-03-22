@@ -6,7 +6,7 @@
 /*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 17:14:17 by aprieto-          #+#    #+#             */
-/*   Updated: 2023/03/20 17:15:44 by aprieto-         ###   ########.fr       */
+/*   Updated: 2023/03/21 14:53:30 by aprieto-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,29 +17,24 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-int	ft_char_is_printable(char c)
-{
-	if (c >= 32 && c <= 126)
-		return (1);
-	else
-		return (0);
-}
-
 void	ft_putstr_non_printable(char *str)
 {
-	int	i;
+	int		value;
+	char	*hexadecimal;
 
-	i = 0;
-	while (str[i] != '\0')
+	hexadecimal = "0123456789abcdef";
+	while (*str != '0')
 	{
-		if (ft_char_is_printable(str[i]) == 1)
-			ft_putchar(str[i]);
-		else
+		if (value < 32 || value > 126)
 		{
 			ft_putchar('\\');
-			ft_putchar("0123456789abcdef"[str[i] / 16]);
-			ft_putchar("0123456789abcdef"[str[i] % 16]);
+			ft_putchar(hexadecimal[value / 16]);
+			ft_putchar(hexadecimal[value % 16]);
 		}
-		i++;
+		else
+		{
+			ft_putchar(*str);
+		}
+		str++;
 	}
 }
