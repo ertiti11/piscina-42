@@ -6,7 +6,7 @@
 /*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 12:39:52 by aprieto-          #+#    #+#             */
-/*   Updated: 2023/03/21 14:45:52 by aprieto-         ###   ########.fr       */
+/*   Updated: 2023/03/23 16:28:16 by aprieto-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,9 @@ int	ft_str_is_printable(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (*str >= 32 && *str <= 126)
-		{
-			i++;
-		}
-		else
-		{
+		if (str[i] < 32 || str[i] > 126)
 			return (0);
-		}
+		i++;
 	}
 	return (1);
 }

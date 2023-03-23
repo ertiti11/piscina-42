@@ -6,35 +6,37 @@
 /*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 17:14:17 by aprieto-          #+#    #+#             */
-/*   Updated: 2023/03/21 14:53:30 by aprieto-         ###   ########.fr       */
+/*   Updated: 2023/03/23 16:28:36 by aprieto-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	hexa(int num)
 {
-	write(1, &c, 1);
+	char	*hex16;
+
+	hex16 = "0123456789abcdef";
+	write(1, &hex16[num / 16], 1);
+	write(1, &hex16[num % 16], 1);
 }
 
 void	ft_putstr_non_printable(char *str)
 {
-	int		value;
-	char	*hexadecimal;
+	int	i;
 
-	hexadecimal = "0123456789abcdef";
-	while (*str != '0')
+	i = 0;
+	while (str[i])
 	{
-		if (value < 32 || value > 126)
+		if (str[i] >= 0 && str[i] <= 31)
 		{
-			ft_putchar('\\');
-			ft_putchar(hexadecimal[value / 16]);
-			ft_putchar(hexadecimal[value % 16]);
+			write(1, "\\", 1);
+			hexa(str[i]);
 		}
 		else
 		{
-			ft_putchar(*str);
+			write(1, &str[i], 1);
 		}
-		str++;
+		i++;
 	}
 }

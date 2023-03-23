@@ -6,7 +6,7 @@
 /*   By: aprieto- <aprieto-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 16:48:47 by aprieto-          #+#    #+#             */
-/*   Updated: 2023/03/21 14:43:28 by aprieto-         ###   ########.fr       */
+/*   Updated: 2023/03/23 16:27:57 by aprieto-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,10 @@ int	ft_str_is_alpha(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i] >= 'a' && str[i] <= 'z')
+	while (str[i] != '\0')
+	{
+		if (str[i] < 'A' || (str[i] > 'Z' && str[i] < 'a') || str[i] > 'z')
+			return (0);
 		i++;
-	if (str[i] == '\0')
-		return (1);
-	else
-		return (0);
-	return (0);
+	}
 }
